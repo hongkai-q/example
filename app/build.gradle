@@ -1,17 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("qapm-plugin")
 }
-preBuild.dependsOn(UUIDGenerator)
 android {
     namespace 'com.quyin.example'
-    compileSdk 34
-
+    compileSdk 35
     defaultConfig {
         applicationId "com.quyin.example"
         minSdk 24
-        targetSdk 34
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
@@ -47,11 +44,4 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation("com.youzanyun.open.mobile:basic:7.15.2") {
-        exclude group: "com.android.support"
-        exclude group: "com.squareup.okhttp3"
-    }
-    implementation("com.tencent.qapm:qapmsdk:5.5.0-pub") {
-        exclude group: "com.android.support"
-    }
 }

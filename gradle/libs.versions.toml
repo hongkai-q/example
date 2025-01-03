@@ -9,6 +9,8 @@ appcompat = "1.6.1"
 material = "1.10.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
+okhttpVersion = "4.9.3"
+qapmsdkVersion = "5.5.0-pub"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -19,6 +21,9 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+tencent-qapmsdk = { module = "com.tencent.qapm:qapmsdk", version.ref = "qapmsdkVersion" }
+okhttp3-okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
