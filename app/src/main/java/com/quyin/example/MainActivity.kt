@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 		enableEdgeToEdge()
 		ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
 			val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-//			v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+			v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
 			val rect = Rect()
 			v.getWindowVisibleDisplayFrame(rect)
 			v.layoutParams.height = rect.height() + systemBars.bottom + systemBars.top
